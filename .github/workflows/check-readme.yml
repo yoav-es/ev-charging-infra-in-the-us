@@ -1,0 +1,16 @@
+# .github/workflows/check-readme.yml
+name: Check for README
+
+on: [push, pull_request]
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Verify README exists
+        run: |
+          if [ ! -f README.md ]; then
+            echo "README.md is missing!"
+            exit 1
+          fi

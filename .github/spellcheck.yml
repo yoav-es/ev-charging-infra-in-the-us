@@ -1,0 +1,40 @@
+version: 0.2
+
+dictionary:
+  - en_US
+
+matrix:
+  - name: Markdown
+    sources:
+      - "**/*.md"
+  # Uncomment below to enable Python spellcheck
+  # - name: Python
+  #   sources:
+  #     - "**/*.py"
+
+custom:
+  - "{{PROJECT_TITLE}}"
+  - "{{SHORT_PROJECT_DESCRIPTION}}"
+  - "{{DATASET_DESCRIPTION}}"
+  - "{{PROJECT_OBJECTIVES}}"
+  - "{{PYTHON_VERSION}}"
+  - "{{REPOSITORY_URL}}"
+  - "{{REPOSITORY_DIRECTORY}}"
+  - "{{MAIN_NOTEBOOK}}"
+  - "{{source}}"
+  - ipynb
+  - jupyter
+  - seaborn
+  - matplotlib
+  - numpy
+  - txt
+  - cd
+  - LICENSE
+  - EDA
+
+exclude:
+  - "*.ipynb"
+  - "node_modules/**"
+  - "dist/**"
+  - ".git/**"
+  - ".github/workflows/**"

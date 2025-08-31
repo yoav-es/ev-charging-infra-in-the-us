@@ -1,0 +1,12 @@
+# .github/workflows/lint-markdown.yml
+name: Lint Markdown
+
+on: [push, pull_request]
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint Markdown
+        uses: avto-dev/markdown-lint@v1
